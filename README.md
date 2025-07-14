@@ -77,3 +77,6 @@ Once the web application is up and running. You can access the game page by goin
 http://http://localhost:5173/
 ```
 This will bring you to the game page, which should look something like this:
+![alt text](images/MainScreen.png)
+
+### Step 4: How to Play the Game
