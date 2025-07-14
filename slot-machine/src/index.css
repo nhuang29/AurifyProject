@@ -56,7 +56,7 @@ header > p {
   flex-direction: row;
   gap: 20px;
   justify-content: center; /* center items in the container */
-  align-items: center;      /* vertically center */
+  align-items: center; /* vertically center */
 }
 
 .winning-information > * {
