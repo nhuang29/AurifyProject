@@ -5,6 +5,7 @@ export default function() {
         <header>
             <h1>Cloud 7 Slots</h1>
             <p>Add to your balance, pay the wager, use your multiplier, spin!</p>
+            <p>Win up to $500!!!</p>
             <div className="winning-information">
                 <p>🍋 🍋 🍋 = $1</p>
                 <p>🍫 🍫 🍫 = $5</p>
