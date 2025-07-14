@@ -74,9 +74,51 @@ From there you should see an output similar to this:
 
 Once the web application is up and running. You can access the game page by going to your local browser and typing:
 ```
-http://http://localhost:5173/
+http://localhost:5173/
 ```
 This will bring you to the game page, which should look something like this:
 ![alt text](images/MainScreen.png)
 
 ### Step 4: How to Play the Game
+1. Add to your balance (any amount you please)
+
+**Note:** You must have money in your starting balance to play the game.
+
+2. Press the **Wage** Button to enter in $1
+
+3. (If desired) Use the dropdown to include a multiplier. The multiplier goes up to 10x.
+
+4. Press the **Spin** Button to generate your results
+
+5. Collect your money in your balance!
+**Note:** Winning will generate a message in the game status box right above the Wage/Multiplier Buttons
+
+6. Cash out anytime, this will return the player balance back to 0 and display the total money you walk out with.
+
+## Supplementary Tasks
+
+1. I implemented a multiplier in the game to allow users to go beyond the $1 buy-in mark. The max multiplier mark is 10x.
+
+2. Every 3 rounds, the user is granted a $10 bonus to keep on playing. 
+
+**Reason:** Even though I value music, ease of gameplay, and other factors in the attractiveness of a game, I believe money is the number one motivator for someone playing a slot machine game. Being able to give a reward for participation will cause the user to stay. 
+
+## Bugs and Limitations
+
+1. When confetti falls for winning, if the user decides to choose a different multiplier, this may cause the game status displayed amount to change with it. 
+
+**Important:** This will not change the player's balance.
+
+2. If the user spams the Wage and Spin Buttons, the messages may lag behind. This is due to the fact that there is a timer for how long the message stays on the game status board
+
+3. Refreshing the page will cause everything to reset. This is a web application, so the state of the user will not persist through refreshes.
+
+## Future Improvements
+### 1. Spinning animations for the slot resuls
+Suspense is a huge part of gambling. I would've implemented a mechanism where the slot results are shown in succession, so the user can see the first 2 results before the last. I missed that excitement factor
+
+### 2. More rounds to obtain bonus money
+Due to testing purposes, I made it 3 rounds before a user gets the bonus $10. If this were in production, I would've made it 15 to 20.
+
+### 3. Unlimited Multiplier
+Looking back, I would've made the multiplier a number input rather than a dropdown, so the users who are feeling super lucky can reach their limits.
