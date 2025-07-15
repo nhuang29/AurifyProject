@@ -35,7 +35,7 @@ header > h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 20px rgba(131, 127, 127, 0.7);
-  font-family: 'Orbitron', sans-serif; /* or 'Press Start 2P', 'Bungee', etc. */
+  font-family: 'Orbitron', sans-serif;
 }
 
 header > p {
@@ -45,7 +45,7 @@ header > p {
   margin: 0 auto;
   text-align: center;
   color: #d0d0d0;
-  font-family: 'Orbitron', sans-serif; /* Match header */
+  font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.5px;
   line-height: 1.5;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
@@ -55,8 +55,8 @@ header > p {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  justify-content: center; /* center items in the container */
-  align-items: center; /* vertically center */
+  justify-content: center;
+  align-items: center;
 }
 
 .winning-information > * {
@@ -135,6 +135,58 @@ header > p {
 
 .add-to-balance > button:hover {
   background-color: #1d4ec1;
+}
+
+.game-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 30px;
+  margin: 10px auto;
+  width: 600px;
+  height: 80px;
+
+  background: linear-gradient(to right, #111111, #222831);
+  border: 2px solid #ffce3d;
+  border-radius: 12px;
+
+  font-family: 'Orbitron', sans-serif;
+  color: #ffe44c;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(255, 206, 61, 0.5);
+  text-align: center;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes blink-sign {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 8px #ffe44c, 0 0 16px #ffdb4d, 0 0 24px #ffd700;
+  }
+  50% {
+    opacity: 0.4;
+    text-shadow: 0 0 2px #ffa500;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in-blinking {
+  animation: 
+    fadeIn 1s ease forwards,
+    blink-sign 1.5s infinite ease-in-out 1s;
 }
 
 .cash-out-button {
@@ -291,57 +343,4 @@ header > p {
   cursor: not-allowed;
   box-shadow: none;
   border: 3px solid #aaa;
-}
-
-
-.game-status {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 20px 30px;
-  margin: 10px auto;
-  width: 600px;
-  height: 80px;
-
-  background: linear-gradient(to right, #111111, #222831);
-  border: 2px solid #ffce3d;
-  border-radius: 12px;
-
-  font-family: 'Orbitron', sans-serif;
-  color: #ffe44c;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  box-shadow: 0 0 10px rgba(255, 206, 61, 0.5);
-  text-align: center;
-  transition: all 1s ease-in-out;
-}
-
-@keyframes blink-sign {
-  0%, 100% {
-    opacity: 1;
-    text-shadow: 0 0 8px #ffe44c, 0 0 16px #ffdb4d, 0 0 24px #ffd700;
-  }
-  50% {
-    opacity: 0.4;
-    text-shadow: 0 0 2px #ffa500;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.fade-in-blinking {
-  animation: 
-    fadeIn 1s ease forwards,
-    blink-sign 1.5s infinite ease-in-out 1s;
 }
