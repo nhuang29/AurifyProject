@@ -33,7 +33,7 @@ Client:
 
 ### Step 2: Running Docker
 
-Now traverse to the slot-machine project directory via terminal/command prompt. In the directory, a file named "Dockerfile" is located there. **First**, ensure Docker Desktop is running. Then, run the commands (separately):
+Now traverse to the slot-machine project directory via terminal/command prompt (command: cd ./slot-machine). In the directory, a file named "Dockerfile" is located there. **First**, ensure Docker Desktop is running. Then, run the commands (separately):
 
 ```commandline
 docker build -t slot-machine-app:dev .
